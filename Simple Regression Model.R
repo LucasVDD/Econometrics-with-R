@@ -12,7 +12,7 @@
 
 # setup
 rm(list = ls()) 
-directory <- "C:/Users/LucVa/Programming/R/Data Files/"
+directory <- "C:/Programming/Econometrics with R/Data Files/"
 
 # Install packages
 PackageNames <- c("tidyverse", "stargazer", "magrittr")

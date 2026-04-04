@@ -1,6 +1,5 @@
 library(ISLR2)
 head(Boston)
-?Boston
 class(Boston)
 
 library(randomForest)

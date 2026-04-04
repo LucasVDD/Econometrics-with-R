@@ -1,7 +1,4 @@
-############################################################
-# GARCH(P, Q) – REAL-WORLD ONLY VERSION
-# Clean employer-ready script
-############################################################
+# GARCH(P, Q)
 
 rm(list = ls())
 graphics.off()
@@ -117,7 +114,6 @@ real_fcst <- ugarchforecast(real_fit, n.ahead = 20)
 
 print(sigma(real_fcst))
 
-pdf("GARCH_forecast.pdf", width = 8, height = 6)
 plot(real_fcst, which = 3)
 dev.off()
 
@@ -160,15 +156,3 @@ for (ord in candidate_orders) {
 }
 
 print(model_results[order(model_results$AIC), ])
-
-
-cat("\n", paste(rep("=", 60), collapse = ""), "\n", sep = "")
-cat("PROJECT SUMMARY\n")
-cat(paste(rep("=", 60), collapse = ""), "\n", sep = "")
-cat("1. Pulled real-world financial data (Yahoo Finance).\n")
-cat("2. Constructed log returns.\n")
-cat("3. Estimated GARCH(p, q) volatility model.\n")
-cat("4. Performed full residual diagnostics.\n")
-cat("5. Generated volatility forecasts.\n")
-cat("6. Compared multiple GARCH specifications.\n")
-cat(paste(rep("=", 60), collapse = ""), "\n", sep = "")

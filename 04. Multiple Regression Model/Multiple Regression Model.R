@@ -18,7 +18,7 @@
 
 # setup
 rm(list = ls()) 
-directory <- "C:/Programming/R/Econometrics-with-R/3. Multiple Regression Model/"
+directory <- getwd()
 
 # Install packages
 PackageNames <- c("tidyverse", "stargazer", "magrittr", "car")
@@ -36,7 +36,7 @@ for(i in PackageNames){
 # See how the coefficients are different for simple vs multiple regression
 
 # Wage Example
-wage1 <- read.csv(paste0(directory, "wage1.csv"))
+wage1 <- read.csv(paste0(directory, "/04. Multiple Regression Model/wage1.csv"))
 wage1 %>% 
   select(wage, educ, exper, tenure) %>% 
   head(10)
@@ -159,7 +159,7 @@ adj_R_squared
 
 
 # CEO Salary Example 
-CEOSAL1 <- read.csv(paste0(directory, "CEOSAL1.csv"))
+CEOSAL1 <- read.csv(paste0(directory, "/04. Multiple Regression Model/CEOSAL1.csv"))
 CEOSAL1 %>% 
   select(salary, lsalary, roe, sales, lsales) %>%
   head(10)
@@ -234,7 +234,7 @@ summary(model_no_constant)
 # Multicollinearity is when regressors are highly correlated with each other.
 
 # Test scores example
-elemapi2 <- read.csv(paste0(directory, "elemapi2.csv"))
+elemapi2 <- read.csv(paste0(directory, "/04. Multiple Regression Model/elemapi2.csv"))
 
 elemapi2 %<>% select(api00, avg_ed, grad_sch, col_grad)
 str(elemapi2)
@@ -270,7 +270,7 @@ vif(model_low_vif)
 # Omitted variable bias is when an omitted variable causes biased coefficients
 
 # Wage2 example
-HTV <- read.csv(paste0(directory, "HTV.csv"))
+HTV <- read.csv(paste0(directory, "/04. Multiple Regression Model/HTV.csv"))
 HTV %<>% select(wage, educ, abil)
 str(HTV)
 stargazer(HTV, type = "text")

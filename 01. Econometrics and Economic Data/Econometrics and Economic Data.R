@@ -14,8 +14,8 @@
 
 # setup
 rm(list = ls()) # clear the workspace
-directory <- "C:/Programming/R/Econometrics-with-R/1. Econometrics and Economic Data/"
-
+directory <- getwd()
+setwd(directory)
 
 # Install packages
 PackageNames <- c("tidyverse", "stargazer", "magrittr", "moments")
@@ -32,7 +32,7 @@ for(i in PackageNames){
 # Observations are individuals
 
 # Load the dataset
-wage <- read.csv(paste0(directory, "wage1.csv"))
+wage <- read.csv(paste0(directory, "/01. Econometrics and Economic Data/wage1.csv"))
 
 # Summarize the data
 stargazer(wage, type = "text")
@@ -61,7 +61,7 @@ table(wage$female)
 # Time series data on minimum wages and related variables
 
 # Load the dataset and keep only select variables
-prminwge <- read.csv(paste0(directory, "prminwge.csv"))
+prminwge <- read.csv(paste0(directory, "/01. Econometrics and Economic Data/prminwge.csv"))
 prminwge %<>% select(year, avgmin, avgcov, prunemp, prgnp)
 
 # Describe and summarize data
@@ -77,7 +77,7 @@ table(prminwge$year)
 # We do not have the price of the same house in both years. 
 
 # Load the dataset and keep only select variables
-hprice3 <- read.csv(paste0(directory, "hprice3.csv"))
+hprice3 <- read.csv(paste0(directory, "/01. Econometrics and Economic Data/hprice3.csv"))
 hprice3 %<>% select(year, y81, price, lprice, rooms, baths)
 
 # Describe and summarize the data
@@ -113,7 +113,7 @@ hprice3 %>%
 # person identifier is nr
 # time identifier is year
 
-wagepan <- read.csv(paste0(directory, "wagepan.csv"))
+wagepan <- read.csv(paste0(directory, "/01. Econometrics and Economic Data/wagepan.csv"))
 
 wagepan %<>% select(nr, year, lwage, exper, educ, hours)
 

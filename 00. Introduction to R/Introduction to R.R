@@ -29,15 +29,12 @@ library(magrittr)
 library(stargazer)
 
 # Set directory
-directory <- "C:/Programming/R/Econometrics-with-R/0. Introduction to R/"
-
-# Get and set working directory
-getwd()
-setwd("C:/Programming/R/Econometrics-with-R/0. Introduction to R/")
+directory <- getwd()
+print(directory)
+setwd(directory)
 
 # Read dataset
-data <- read.csv("C:/Programming/R/Econometrics-with-R/0. Introduction to R/wage1.csv")
-data <- read.csv(paste0(directory, "wage1.csv"))
+data <- read.csv(paste0(directory, "/00. Introduction to R/wage1.csv"))
 
 # Exploring data ----------------------------------------------------------
   
@@ -87,7 +84,7 @@ linear.model.1 <- lm(wage ~ educ, data) # wage regressed on a constant and educ
 summary(linear.model.1)
 
 # Export results in table
-stargazer(linear.model.1, type = "html", out = "regtable.html")
+stargazer(linear.model.1, type = "html", out = "00. Introduction to R/regtable.html")
 # 'stargazer' produces html file or Word file.
 # The output is exported to the current working directory.
 
@@ -98,4 +95,4 @@ summary(linear.model.2)
 # Export results in table
 stargazer(linear.model.1, linear.model.2,
           type = "html",
-          out = "regtable.doc")
+          out = "00. Introduction to R/regtable.doc")

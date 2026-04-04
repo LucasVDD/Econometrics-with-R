@@ -1,6 +1,6 @@
-# Papers:
-  # A tutorial on principal component analysis
-  # WIRE's Computational Stats - Component Analysis
+# Recommended Papers:
+  # A tutorial on principal component analysis - Jonathon Shlens
+  # Multiple factor analysis: principal component analysis for multitable and multiblock data sets by Abdi, Williams and Valentin (WIREs Comput Stat 2013. doi: 10.1002/wics.1246)
 
 # install.packages("ISLR2")
 library(ISLR2)

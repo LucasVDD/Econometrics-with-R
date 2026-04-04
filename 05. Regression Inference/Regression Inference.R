@@ -13,7 +13,7 @@
 
 # setup
 rm(list = ls()) 
-directory <- "C:/Programming/R/Econometrics-with-R/4. Regression Inference/"
+directory <- getwd()
 
 # Install packages
 PackageNames <- c("tidyverse", "stargazer", "magrittr", "car")
@@ -28,7 +28,7 @@ for(i in PackageNames){
 # Shapiro-Wilk test for normality --------------------------------------
 
 # Wage example
-wage1 <- read.csv(paste0(directory, "wage1.csv"))
+wage1 <- read.csv(paste0(directory, "/05. Regression Inference/wage1.csv"))
 
 wage1 %>% 
   select(wage, educ, exper, tenure, female) %>% 

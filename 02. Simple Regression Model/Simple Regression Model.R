@@ -12,7 +12,10 @@
 
 # setup
 rm(list = ls()) 
-directory <- "C:/Programming/R/Econometrics-with-R/2. Simple Regression Model/"
+
+directory <- getwd()
+setwd(directory)
+print(directory)
 
 # Install packages
 PackageNames <- c("tidyverse", "stargazer", "magrittr")
@@ -26,7 +29,7 @@ for(i in PackageNames){
 # Simple regression ----------------------------------------------------
 
 # CEO salary example 
-CEOSAL1 <- read.csv(paste0(directory, "CEOSAL1.csv"))
+CEOSAL1 <- read.csv(paste0(directory, "/02. Simple Regression Model/CEOSAL1.csv"))
 
 CEOSAL1 %<>% select(salary, roe)
 str(CEOSAL1)
@@ -54,7 +57,7 @@ ggplot(data = CEOSAL1, mapping = aes(x = roe, y = salary)) +
   geom_smooth(method = "lm", se = FALSE)
 
 # Wage example
-wage1 <- read.csv(paste0(directory, "wage1.csv"))
+wage1 <- read.csv(paste0(directory, "/02. Simple Regression Model/wage1.csv"))
 wage1 %<>% select(wage, educ)
 str(wage1)
 stargazer(wage1, type = "text")
@@ -133,7 +136,7 @@ nobs(model_wage1)
 # Log forms: log-log and log-linear form -------------------------------
 
 # CEO salary example
-CEOSAL2 <- read.csv(paste0(directory, "CEOSAL1.csv"))
+CEOSAL2 <- read.csv(paste0(directory, "/02. Simple Regression Model/CEOSAL1.csv"))
 CEOSAL2 %>% select(salary, lsalary, sales, lsales) %>% head(10)
 
 # Linear form
@@ -173,7 +176,7 @@ ggplot(CEOSAL2, aes(x = sales, y = lsalary)) +
   geom_smooth(method = lm, se = F)
 
 # Wage Example 
-wage2 <- read.csv(paste0(directory, "wage1.csv"))
+wage2 <- read.csv(paste0(directory, "/02. Simple Regression Model/wage1.csv"))
 select(wage2, wage, lwage, educ) %>% head(10)
 
 # Linear form

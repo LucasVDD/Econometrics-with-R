@@ -14,7 +14,7 @@ If you have already taken a course in Econometrics you may skip them and start w
 03. Linear Regression
 04. Multiple Regression Model
 05. Regression Inference
-06. OLS Asymptotics*
+06. OLS Asymptotics
 07. Regression Variable Transformations*
 08. Regression with Indicator Variables*
 09. Heteroscedasticity*
@@ -43,26 +43,27 @@ If you have already taken a course in Econometrics you may skip them and start w
 24. ARMA(p,q)*
 25. ARIMA(p,d,q)*
 26. Unit Roots*
-27. ARCH(p) and GARCH(p,q)*
-28. Vector Autoregression (VAR)*
-29. Vector Error Correction (VEC)*
+27. Cointegration
+28. ARCH(p) and GARCH(p,q)*
+29. Vector Autoregression (VAR)*
+30. Vector Error Correction (VEC)*
 
 ### Advanced Topics in Econometrics
-30. Quantile Regression*
-31. Propensity Score Matching*
-32. Survival Analysis*
-33. Spatial Econometrics*
+31. Quantile Regression*
+32. Propensity Score Matching*
+33. Survival Analysis*
+34. Spatial Econometrics*
 
 ### High-Dimensional Data Methods
-34. LASSO (L1 Regularization)*
-35. Ridge (L2 Regularization)*
-36. Elastic Net*
-37. Stepwise Regression*
-38. Principal Component Analysis*
-39. Post-Selection Inference*
+35. LASSO (L1 Regularization)*
+36. Ridge (L2 Regularization)*
+37. Elastic Net*
+38. Stepwise Regression*
+39. Principal Component Analysis
+40. Post-Selection Inference*
 
 ### Machine Learning Methods
-40. Random Forest*
+41. Random Forest
 
 _Topics with an asterisk (*) are currently in progress_
 
@@ -101,7 +102,7 @@ Choose one:
 
 - Greene, W. H. (2018). Econometric analysis (8th ed.). Pearson.
 
-- William, W. S. Wei. (2006). Time Series Analysis: Univeriate and Multivariate Methods (2nd ed.) Pearson Education.
+- William, W. S. Wei. (2006). Time Series Analysis: Univariate and Multivariate Methods (2nd ed.) Pearson Education.
 
 - Wooldridge, J. M. (2020). Introductory econometrics: A modern approach (7th ed.). Cengage Learning.
 
